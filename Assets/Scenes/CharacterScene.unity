@@ -152,7 +152,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4504bd127095bc46898c43c5b76ab2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  MoveSpeed: 2
+  hp: 0
+  maxHp: 0
+  attack: 0
+  moveSpeed: 0
   animator: {fileID: 0}
 --- !u!143 &14522688
 CharacterController:
@@ -505,6 +508,47 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6501656741240537226, guid: b2dfadfada0fd634ebbfc36909e42c1c, type: 3}
+    - {fileID: 1164543855719090182, guid: b2dfadfada0fd634ebbfc36909e42c1c, type: 3}
+    - {fileID: 2430102882755742554, guid: b2dfadfada0fd634ebbfc36909e42c1c, type: 3}
+    - {fileID: 1164543854918164240, guid: b2dfadfada0fd634ebbfc36909e42c1c, type: 3}
+    - {fileID: 3519010536681112132, guid: b2dfadfada0fd634ebbfc36909e42c1c, type: 3}
+    - {fileID: 6501656741166974022, guid: b2dfadfada0fd634ebbfc36909e42c1c, type: 3}
+    - {fileID: 4048456722368170594, guid: b2dfadfada0fd634ebbfc36909e42c1c, type: 3}
+    - {fileID: 3519010536252393749, guid: b2dfadfada0fd634ebbfc36909e42c1c, type: 3}
+    - {fileID: 4048456721136544909, guid: b2dfadfada0fd634ebbfc36909e42c1c, type: 3}
+    - {fileID: 1164543854297012752, guid: b2dfadfada0fd634ebbfc36909e42c1c, type: 3}
+    - {fileID: 2430102881667956615, guid: b2dfadfada0fd634ebbfc36909e42c1c, type: 3}
+    - {fileID: 2430102881390221194, guid: b2dfadfada0fd634ebbfc36909e42c1c, type: 3}
+    - {fileID: 6312927901254477543, guid: b2dfadfada0fd634ebbfc36909e42c1c, type: 3}
+    - {fileID: 517156672683777681, guid: b2dfadfada0fd634ebbfc36909e42c1c, type: 3}
+    - {fileID: 6312927902478515955, guid: b2dfadfada0fd634ebbfc36909e42c1c, type: 3}
+    - {fileID: 6501656739654389580, guid: b2dfadfada0fd634ebbfc36909e42c1c, type: 3}
+    - {fileID: 6312927902738325753, guid: b2dfadfada0fd634ebbfc36909e42c1c, type: 3}
+    - {fileID: 3519010537043721658, guid: b2dfadfada0fd634ebbfc36909e42c1c, type: 3}
+    - {fileID: 1164543854608888838, guid: b2dfadfada0fd634ebbfc36909e42c1c, type: 3}
+    - {fileID: 517156671798605932, guid: b2dfadfada0fd634ebbfc36909e42c1c, type: 3}
+    - {fileID: 2430102881335159324, guid: b2dfadfada0fd634ebbfc36909e42c1c, type: 3}
+    - {fileID: 3519010535541961049, guid: b2dfadfada0fd634ebbfc36909e42c1c, type: 3}
+    - {fileID: 3519010536213965516, guid: b2dfadfada0fd634ebbfc36909e42c1c, type: 3}
+    - {fileID: 6312927900985235741, guid: b2dfadfada0fd634ebbfc36909e42c1c, type: 3}
+    - {fileID: 6312927902929440581, guid: b2dfadfada0fd634ebbfc36909e42c1c, type: 3}
+    - {fileID: 4048456721081773228, guid: b2dfadfada0fd634ebbfc36909e42c1c, type: 3}
+    - {fileID: 6501656740615404910, guid: b2dfadfada0fd634ebbfc36909e42c1c, type: 3}
+    - {fileID: 1164543854242582006, guid: b2dfadfada0fd634ebbfc36909e42c1c, type: 3}
+    - {fileID: 517156672354491302, guid: b2dfadfada0fd634ebbfc36909e42c1c, type: 3}
+    - {fileID: 2430102882834967225, guid: b2dfadfada0fd634ebbfc36909e42c1c, type: 3}
+    - {fileID: 6501656740173175240, guid: b2dfadfada0fd634ebbfc36909e42c1c, type: 3}
+    - {fileID: 6312927902888357152, guid: b2dfadfada0fd634ebbfc36909e42c1c, type: 3}
+    - {fileID: 3519010535632653643, guid: b2dfadfada0fd634ebbfc36909e42c1c, type: 3}
+    - {fileID: 2430102882858098331, guid: b2dfadfada0fd634ebbfc36909e42c1c, type: 3}
+    - {fileID: 6501656740010068719, guid: b2dfadfada0fd634ebbfc36909e42c1c, type: 3}
+    - {fileID: 1164543853748478895, guid: b2dfadfada0fd634ebbfc36909e42c1c, type: 3}
+    - {fileID: 6501656739704735085, guid: b2dfadfada0fd634ebbfc36909e42c1c, type: 3}
+    - {fileID: 6501656740059331354, guid: b2dfadfada0fd634ebbfc36909e42c1c, type: 3}
+    - {fileID: 1164543855745971387, guid: b2dfadfada0fd634ebbfc36909e42c1c, type: 3}
+    - {fileID: 3519010535657861165, guid: b2dfadfada0fd634ebbfc36909e42c1c, type: 3}
+    - {fileID: 6312927901393099323, guid: b2dfadfada0fd634ebbfc36909e42c1c, type: 3}
+    - {fileID: 6501656740013457806, guid: b2dfadfada0fd634ebbfc36909e42c1c, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -535,7 +579,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4504bd127095bc46898c43c5b76ab2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  MoveSpeed: 5
+  hp: 0
+  maxHp: 0
+  attack: 0
+  moveSpeed: 5
   animator: {fileID: 579282903}
 --- !u!114 &579282900
 MonoBehaviour:
@@ -585,7 +632,7 @@ CharacterController:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Height: 1.1
+  m_Height: 1
   m_Radius: 0.3
   m_SlopeLimit: 45
   m_StepOffset: 0.3
