@@ -20,8 +20,8 @@ public class MapGenerator : MonoBehaviour
     private int _height { get; set; }
 
     private List<NavMeshSurface> _allSurfaces = new List<NavMeshSurface>();
-    private List<Vector3> _allEdgePoints = new List<Vector3>();
-    private float _threshold = 1.5f;
+    //private List<Vector3> _allEdgePoints = new List<Vector3>();
+    //private float _threshold = 1.5f;
 
     private void Awake()
     {
@@ -84,8 +84,8 @@ public class MapGenerator : MonoBehaviour
             surface.BuildNavMesh();
         }
 
-        var scale = Vector3.one;
-        scale.y /= 4;
+        var scale = Vector3.one * 0.75f;
+        scale.y /= 3.0f;
         _parent.transform.localScale = scale;
 
         // 一括ベイクしたので接続処理いらないかも？
