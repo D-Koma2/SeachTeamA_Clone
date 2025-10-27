@@ -3,7 +3,6 @@ using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(CharacterController))]
 [RequireComponent(typeof(PlayerInput))]
-//[RequireComponent(typeof(PlayerStatus))]
 [RequireComponent(typeof(CommonAttack))]
 
 
