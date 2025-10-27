@@ -29,8 +29,9 @@ public class CommonAttack : MonoBehaviour
     public void OnAttackHit(Collider collider)
     {
         //攻撃判定に触れたオブジェクトにダメージを与える
-        var targetStatus = collider.GetComponent<CommonStatus>();
+        var targetStatus = collider.GetComponent<CommonStatus>();//攻撃対象のステータスを取得
         if (null== targetStatus) return;
+        Debug.Log("Attack Hit!");
         targetStatus.Damage(status.attack);
 
     }

@@ -29,7 +29,8 @@ public class CommonStatus : MonoBehaviour
         state = StateEnum.Dead;
         animator.SetTrigger("Die");
         //€‚ñ‚¾‚ç”•bŒãÁ‚¦‚é
-        Destroy(gameObject, 5f);
+        Destroy(gameObject, 3.0f);
+
     }
     public void ReturnToNormalState()
     {
@@ -41,6 +42,8 @@ public class CommonStatus : MonoBehaviour
         if (!IsAttackable) return;
         state = StateEnum.Attacking;
         animator.SetTrigger("Attack");
+
+
     }
 
     public void Damage(int attack)
