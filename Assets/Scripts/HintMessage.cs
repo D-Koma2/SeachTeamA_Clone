@@ -1,9 +1,9 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 public class HintMessage : MonoBehaviour
 {
     [SerializeField] private string[] _hintText;
-    private string _currentMsg = "–¢İ’è";
+    private string _currentMsg = "æœªè¨­å®š";
 
     private void OnTriggerEnter(Collider other)
     {
@@ -11,7 +11,7 @@ public class HintMessage : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        Debug.Log("ƒqƒ“ƒg•\¦ƒIƒt");
+        Debug.Log("ãƒ’ãƒ³ãƒˆè¡¨ç¤ºã‚ªãƒ•");
     }
 
     public void SetCurrentMessage(int num)
@@ -22,8 +22,8 @@ public class HintMessage : MonoBehaviour
         }
         else
         {
-            _currentMsg = "HHH";
-            Debug.Log("ˆø”‚ªƒƒbƒZ[ƒW”z—ñ‚Ì—v‘f”‚ğƒI[ƒo[‚µ‚Ä‚¢‚Ü‚·");
+            _currentMsg = "ï¼Ÿï¼Ÿï¼Ÿ";
+            Debug.Log("å¼•æ•°ãŒãƒ¡ãƒƒã‚»ãƒ¼ã‚¸é…åˆ—ã®è¦ç´ æ•°ã‚’ã‚ªãƒ¼ãƒãƒ¼ã—ã¦ã„ã¾ã™");
         }
     }
 }

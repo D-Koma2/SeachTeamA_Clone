@@ -44,6 +44,7 @@ public class CommonStatus : MonoBehaviour
         animator.SetTrigger("Attack");
 
 
+
     }
 
     public void Damage(int attack)
