@@ -181,7 +181,8 @@ MonoBehaviour:
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
+  m_fontSharedMaterials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -870,6 +871,10 @@ PrefabInstance:
       value: Set Costume_02 SD Yuko
       objectReference: {fileID: 0}
     - target: {fileID: 8062157943529065004, guid: b2dfadfada0fd634ebbfc36909e42c1c, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8062157943529065004, guid: b2dfadfada0fd634ebbfc36909e42c1c, type: 3}
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
@@ -962,6 +967,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8062157943529065004, guid: b2dfadfada0fd634ebbfc36909e42c1c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 579282899}
+    - targetCorrespondingSourceObject: {fileID: 8062157943529065004, guid: b2dfadfada0fd634ebbfc36909e42c1c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 579282905}
   m_SourcePrefab: {fileID: 100100000, guid: b2dfadfada0fd634ebbfc36909e42c1c, type: 3}
 --- !u!1 &579282898 stripped
 GameObject:
@@ -1050,6 +1058,20 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8062157943528970188, guid: b2dfadfada0fd634ebbfc36909e42c1c, type: 3}
   m_PrefabInstance: {fileID: 579282897}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &579282905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 579282898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cfd15eaad8cca743965898d94f5bd8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CommonAttack
+  attackInterval: 1
+  attackcollider: {fileID: 0}
 --- !u!1 &924042452
 GameObject:
   m_ObjectHideFlags: 0
