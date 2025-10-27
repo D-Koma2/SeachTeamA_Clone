@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.AI;
-using System.Collections;
-
+using UnityEngine.Events;
 [RequireComponent(typeof(NavMeshAgent))]
 public class EnemyStatus : CommonStatus
 
@@ -27,7 +26,7 @@ public class EnemyStatus : CommonStatus
     protected override void OnDie()
     {
         OnEnemyDie?.Invoke(this);
-        StartCoroutine(DestroyCoroutine());
+        //StartCoroutine(DestroyCoroutine());
     }
     
 }
