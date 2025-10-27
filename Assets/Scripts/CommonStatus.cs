@@ -1,4 +1,4 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 public class CommonStatus : MonoBehaviour
 
@@ -9,26 +9,29 @@ public class CommonStatus : MonoBehaviour
         Attacking,
         Dead
     }
-    [SerializeField] private int hp;//‘Ì—Í
-    [SerializeField] private int maxHp;//Å‘å‘Ì—Í
-    [SerializeField] public int attack;//UŒ‚—Í
-    [SerializeField] private float moveSpeed;//ˆÚ“®‘¬“x
+    [SerializeField] private int hp;//ä½“åŠ›
+    [SerializeField] private int maxHp;//æœ€å¤§ä½“åŠ›
+    [SerializeField] public int attack;//æ”»æ’ƒåŠ›
+    [SerializeField] private float moveSpeed;//ç§»å‹•é€Ÿåº¦
     [SerializeField] public float MoveSpeed { get { return moveSpeed; } }
-    public bool IsMovable => StateEnum.Normal == state;//ˆÚ“®‰Â”\‚©‚Ç‚¤‚©
+    public bool IsMovable => StateEnum.Normal == state;//ç§»å‹•å¯èƒ½ã‹ã©ã†ã‹
 
-    public bool IsAttackable => StateEnum.Normal == state;//UŒ‚‰Â”\‚©‚Ç‚¤‚©
-    protected StateEnum state = StateEnum.Normal;//ó‘Ô
+    public bool IsAttackable => StateEnum.Normal == state;//æ”»æ’ƒå¯èƒ½ã‹ã©ã†ã‹
+    protected StateEnum state = StateEnum.Normal;//çŠ¶æ…‹
+
+    public int GetHp() { return hp; }
+    public int GetMaxHp() { return maxHp; }
     
-    [SerializeField] protected Animator animator;//ƒAƒjƒ[ƒ^[
+    [SerializeField] protected Animator animator;//ã‚¢ãƒ‹ãƒ¡ãƒ¼ã‚¿ãƒ¼
     protected virtual void Start()
     {
         animator = GetComponent<Animator>();
     }
-    protected virtual void OnDie()//€‚ñ‚¾‚Æ‚«‚Ìˆ—
+    protected virtual void OnDie()//æ­»ã‚“ã ã¨ãã®å‡¦ç†
     {
         state = StateEnum.Dead;
         animator.SetTrigger("Die");
-        //€‚ñ‚¾‚ç”•bŒãÁ‚¦‚é
+        //æ­»ã‚“ã ã‚‰æ•°ç§’å¾Œæ¶ˆãˆã‚‹
         Destroy(gameObject, 5f);
     }
     public void ReturnToNormalState()
