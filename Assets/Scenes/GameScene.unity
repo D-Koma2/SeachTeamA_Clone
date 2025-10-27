@@ -1420,6 +1420,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4504bd127095bc46898c43c5b76ab2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+--- !u!1 &1095537449 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8000248297386379629, guid: 6585831c82eccda40b1262f3051689c6, type: 3}
+  m_PrefabInstance: {fileID: 1969031307}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1567562027
 GameObject:
   m_ObjectHideFlags: 0
@@ -2223,7 +2228,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1012566544}
+  m_GameObject: {fileID: 1095537449}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ee958ff952bea674bb6927a65d1b7a42, type: 3}
