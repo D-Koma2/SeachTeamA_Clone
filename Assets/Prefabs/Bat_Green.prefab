@@ -1059,9 +1059,9 @@ GameObject:
   - component: {fileID: 4356918044564315946}
   - component: {fileID: 7444217284313378980}
   - component: {fileID: 5017275444382675326}
-  - component: {fileID: 326608006378872613}
   - component: {fileID: 1975803582091593521}
-  - component: {fileID: 472751765225967930}
+  - component: {fileID: 7966394115381705738}
+  - component: {fileID: 4061066808924019168}
   m_Layer: 7
   m_Name: Bat_Green
   m_TagString: Untagged
@@ -1132,19 +1132,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &326608006378872613
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5381961985419166852}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c9da13af7c509546af1aad40d4e2261, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyFollow
-  player: {fileID: 0}
 --- !u!114 &1975803582091593521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1159,7 +1146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CommonAttack
   attackInterval: 0.5
   attackcollider: {fileID: 8640796567802026748}
---- !u!114 &472751765225967930
+--- !u!114 &7966394115381705738
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1168,14 +1155,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 5381961985419166852}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a97dfd642facc24f90a2f6398b635f9, type: 3}
+  m_Script: {fileID: 11500000, guid: a9e498f05941ce044a910fdfdc9ffb60, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CommonStatus
-  hp: 0
-  maxHp: 0
-  attack: 0
-  moveSpeed: 0
-  animator: {fileID: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyStatus
+  hp: 1
+  maxHp: 1
+  attack: 1
+  moveSpeed: 2
+  animator: {fileID: 7444217284313378980}
+--- !u!114 &4061066808924019168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5381961985419166852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c9da13af7c509546af1aad40d4e2261, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyFollow
+  player: {fileID: 0}
 --- !u!1 &5558175141017638324
 GameObject:
   m_ObjectHideFlags: 0
