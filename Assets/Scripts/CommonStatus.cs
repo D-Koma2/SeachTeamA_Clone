@@ -54,6 +54,15 @@ public class CommonStatus : MonoBehaviour
         if (hp > 0) return;
         OnDie();
     }
+    public int GetMaxHp()
+    {
+        return maxHp;
+    }
+    public int GetHp()
+    {
+        return hp;
+    }
+
 
 
 }
