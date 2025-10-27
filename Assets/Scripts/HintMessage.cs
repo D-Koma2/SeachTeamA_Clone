@@ -22,7 +22,7 @@ public class HintMessage : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        Debug.Log("�q���g�\���I�t");
+        Debug.Log("ヒント表示オフ");
         HideMessageWindow(_currentMsg);
     }
 
