@@ -30,7 +30,6 @@ public class CommonStatus : MonoBehaviour
         animator.SetTrigger("Die");
         //€‚ñ‚¾‚ç”•bŒãÁ‚¦‚é
         Destroy(gameObject, 3.0f);
-
     }
     public void ReturnToNormalState()
     {
