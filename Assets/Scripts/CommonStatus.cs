@@ -1,8 +1,9 @@
 using UnityEngine;
+using UnityEngine.AI;
 
 public class CommonStatus : MonoBehaviour
-
 {
+
     protected enum StateEnum
     {
         Normal,
@@ -21,14 +22,15 @@ public class CommonStatus : MonoBehaviour
     protected StateEnum state = StateEnum.Normal;//状態
     
     [SerializeField] protected Animator animator;//アニメーター
+
     protected virtual void Start()
     {
         animator = GetComponent<Animator>();
+
     }
     protected virtual void OnDie()//死んだときの処理
     {
         state = StateEnum.Dead;
-        animator.ResetTrigger("Die");
         animator.SetTrigger("Die");
         //死んだら数秒後消える
         Destroy(gameObject, 3.0f);
@@ -38,14 +40,11 @@ public class CommonStatus : MonoBehaviour
         if (state == StateEnum.Dead) return;
         state = StateEnum.Normal;
     }
-    public void GotoAttackStateIfPossible()
+    public virtual void GotoAttackStateIfPossible()
     {
         if (!IsAttackable) return;
         state = StateEnum.Attacking;
         animator.SetTrigger("Attack");
-
-
-
     }
 
     public void Damage(int attack)

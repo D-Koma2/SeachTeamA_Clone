@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.AI;
 
 [RequireComponent(typeof(CommonStatus))]
 public class CommonAttack : MonoBehaviour
@@ -7,7 +8,6 @@ public class CommonAttack : MonoBehaviour
     [SerializeField] private float attackInterval = 1.0f;//攻撃間隔
     [SerializeField] private Collider attackcollider;//攻撃判定用コライダー
     private CommonStatus status;
-
     private void Start()
     {
         status = GetComponent<CommonStatus>();

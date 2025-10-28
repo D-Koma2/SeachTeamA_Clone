@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyFollow : MonoBehaviour
+public class EnemyFollow_Bat : MonoBehaviour
 {
     public Transform player; // プレイヤーのTransform
     private NavMeshAgent agent;
@@ -18,7 +18,7 @@ public class EnemyFollow : MonoBehaviour
         {
             agent.SetDestination(player.position); // プレイヤーの位置に向かって移動
             //一定距離内に入ったら停止
-            if (Vector3.Distance(transform.position, player.position) < 2.0f)
+            if (Vector3.Distance(transform.position, player.position) < 0.8f)
             {
                 agent.isStopped = true; // プレイヤーに近づいたら停止
             }
