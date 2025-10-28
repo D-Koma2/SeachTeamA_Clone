@@ -135,7 +135,7 @@ public class MapGenerator : MonoBehaviour
 
                 if (cells[y] == "00") { } // 何もしない
                 else if (cells[y] == "SS")
-                {
+                {\
                     _newPosition = new Vector3(-x * 7.5f, 0, -y * 7.5f);
                     var hint = Instantiate(_hintObjects[2], pos, Quaternion.identity, _parent);
                     hint.GetComponent<HintMessage>().SetCurrentMessage(0, _messageWindow);
