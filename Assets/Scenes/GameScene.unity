@@ -2551,18 +2551,36 @@ MonoBehaviour:
     messageText: "\u6575\u3092\u5168\u90E8\u5012\u305B"
     fontAsset: {fileID: 11400000, guid: 4da14438fd3a2474fb88bd56d8bedee4, type: 2}
     fontSize: 100
+    topLeftColor: {r: 1, g: 1, b: 1, a: 1}
+    topRightColor: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeftColor: {r: 1, g: 1, b: 1, a: 1}
+    bottomRightColor: {r: 1, g: 1, b: 1, a: 1}
+    mainTexture: {fileID: 0}
+    sfxClip: {fileID: 0}
     animator: {fileID: 1798396678}
     animationTrigger: Trigger_Enter
   - type: 1
     messageText: "\u5168\u6EC5"
     fontAsset: {fileID: 11400000, guid: 4da14438fd3a2474fb88bd56d8bedee4, type: 2}
     fontSize: 200
+    topLeftColor: {r: 1, g: 0.03773582, b: 0.03773582, a: 1}
+    topRightColor: {r: 1, g: 0, b: 0, a: 1}
+    bottomLeftColor: {r: 0, g: 0, b: 0, a: 1}
+    bottomRightColor: {r: 0, g: 0, b: 0, a: 1}
+    mainTexture: {fileID: 0}
+    sfxClip: {fileID: 0}
     animator: {fileID: 1798396678}
     animationTrigger: Trigger_Defeat
   - type: 2
     messageText: "\u6642\u9593\u5207\u308C"
     fontAsset: {fileID: 11400000, guid: 5669443eab53ade4eaa0142bf64b5f91, type: 2}
     fontSize: 60
+    topLeftColor: {r: 1, g: 1, b: 1, a: 1}
+    topRightColor: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeftColor: {r: 1, g: 1, b: 1, a: 1}
+    bottomRightColor: {r: 1, g: 1, b: 1, a: 1}
+    mainTexture: {fileID: 0}
+    sfxClip: {fileID: 0}
     animator: {fileID: 1798396678}
     animationTrigger: Trigger_Bounce
 --- !u!95 &1798396678
@@ -2574,7 +2592,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1798396672}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 130326b77ac88174b8c174334b96ea76, type: 3}
+  m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 11188944869f5c54095a5be96388ad17, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
@@ -2969,7 +2987,6 @@ GameObject:
   - component: {fileID: 2047682872}
   - component: {fileID: 2047682874}
   - component: {fileID: 2047682873}
-  - component: {fileID: 2047682875}
   m_Layer: 5
   m_Name: MessageTex(TMP)
   m_TagString: Untagged
@@ -3095,28 +3112,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2047682871}
   m_CullTransparentMesh: 1
---- !u!95 &2047682875
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2047682871}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1941ebb26a2ccca43ae2184cce65f8e3, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2070875767
 GameObject:
   m_ObjectHideFlags: 0
