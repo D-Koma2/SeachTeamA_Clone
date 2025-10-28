@@ -24,6 +24,8 @@ public class PlayerController : CommonStatus
     [SerializeField]
     private CinemachineCamera StopCamera;
 
+    private MessageUIController _messageController;
+
 
     void Start()
     {
@@ -33,6 +35,8 @@ public class PlayerController : CommonStatus
         move = inputActionAsset.FindAction("Move");//移動アクションを取得
         _attack = inputActionAsset.FindAction("Attack");//攻撃アクションを取得
         LastPostion = transform.position;//初期位置を設定
+
+        _messageController = FindFirstObjectByType<MessageUIController>(FindObjectsInactive.Include);
     }
 
     void Update()
@@ -79,6 +83,13 @@ public class PlayerController : CommonStatus
         if(state== StateEnum.Dead)
         {
             characterController.enabled = false;//キャラクターコントローラーを無効化
+            
+            if (_messageController != null)//メッセージUIコントローラーを確認して全滅メッセージを入れる
+            {
+                // MessageType.PlayerDefeated を指定して呼び出す
+                _messageController.ShowMessage(MessageUIController.MessageType.PlayerDefeated);
+            }
+
         }
     }
 }
