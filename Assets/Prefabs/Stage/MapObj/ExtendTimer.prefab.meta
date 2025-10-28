@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Prefabs/Stage/MapObj/ExtendTimer.prefab.meta
 guid: 3843f1852ff5f774c90bb0878c7c1f3f
-========
-guid: 7e093f25da3c4ed4db5488f5386508e8
->>>>>>>> main:Assets/Prefabs/Stage/MapObj/SpawnerBoss.prefab.meta
 PrefabImporter:
   externalObjects: {}
   userData: 
