@@ -17,6 +17,7 @@ public class CommonStatus : MonoBehaviour
     public bool IsMovable => StateEnum.Normal == state;//移動可能かどうか
 
     public bool IsAttackable => StateEnum.Normal == state;//攻撃可能かどうか
+    public bool IsAlive => StateEnum.Dead != state;//生存しているかどうか
     protected StateEnum state = StateEnum.Normal;//状態
     
     [SerializeField] protected Animator animator;//アニメーター
@@ -27,6 +28,7 @@ public class CommonStatus : MonoBehaviour
     protected virtual void OnDie()//死んだときの処理
     {
         state = StateEnum.Dead;
+        animator.ResetTrigger("Die");
         animator.SetTrigger("Die");
         //死んだら数秒後消える
         Destroy(gameObject, 3.0f);

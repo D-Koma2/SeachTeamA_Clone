@@ -28,6 +28,7 @@ public class EnemyStatus : CommonStatus
     {
         OnEnemyDie?.Invoke(this);
         base.OnDie();
+        agent.isStopped = true;
         //StartCoroutine(DestroyCoroutine());
     }
     

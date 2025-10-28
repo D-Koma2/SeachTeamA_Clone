@@ -6,8 +6,8 @@ public class CommonAttack : MonoBehaviour
 {
     [SerializeField] private float attackInterval = 1.0f;//攻撃間隔
     [SerializeField] private Collider attackcollider;//攻撃判定用コライダー
-
     private CommonStatus status;
+
     private void Start()
     {
         status = GetComponent<CommonStatus>();
@@ -20,6 +20,7 @@ public class CommonAttack : MonoBehaviour
     }
     public void OnAttackRangeEnter(Collider other)
     {
+        if (!status.IsAlive) return;
         AttackIfPossible();
     }
     public void OnAttackStart()
