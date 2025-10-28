@@ -66,7 +66,7 @@ public class SpawnerAnnihilate : MonoBehaviour
                     var enemy = Instantiate(_enemyPrefabs[enemyPrefabIndex], hit.position, rotation);
                     enemy.gameObject.name = _enemyPrefabs[enemyPrefabIndex].name + "_" + _spawnCount.ToString("00");
                     var enemyStatus = enemy.GetComponent<EnemyStatus>();
-                    enemyStatus.gameObject.GetComponent<EnemyFollow>().player = _target;
+                    enemyStatus.gameObject.GetComponent<EnemyFollow_Bat>().player = _target;
 
                     enemyStatus.EnewmyDieEvent.AddListener(OnEnemyDefeated);
 

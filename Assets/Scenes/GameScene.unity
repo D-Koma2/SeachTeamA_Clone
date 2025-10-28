@@ -1922,9 +1922,8 @@ GameObject:
   - component: {fileID: 1653825842}
   - component: {fileID: 1653825844}
   - component: {fileID: 1653825843}
-  - component: {fileID: 1653825845}
   m_Layer: 5
-  m_Name: MessageWindowText (TMP)
+  m_Name: MessageWindowText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2048,19 +2047,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1653825841}
   m_CullTransparentMesh: 1
---- !u!114 &1653825845
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1653825841}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48517bb2ff4e65e4a89d0a17fc39484b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TargetDisplayManager
-  targetCountText: {fileID: 0}
 --- !u!1 &1743861182
 GameObject:
   m_ObjectHideFlags: 0
