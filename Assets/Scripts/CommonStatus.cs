@@ -32,8 +32,6 @@ public class CommonStatus : MonoBehaviour
     {
         state = StateEnum.Dead;
         animator.ResetTrigger("Attack");
-        animator.ResetTrigger("Move");
-        animator.ResetTrigger("Idle");
         animator.SetTrigger("Die");
         //€‚ñ‚¾‚ç”•bŒãÁ‚¦‚é
         Destroy(gameObject, 3.0f);
