@@ -20,7 +20,7 @@ public class CommonAttack : MonoBehaviour
     }
     public void OnAttackRangeEnter(Collider other)
     {
-        if (!status.IsAlive) return;
+        if (!status.IsAlive) return; 
         StartCoroutine(AttackDelay(1.5f));
        
     }
