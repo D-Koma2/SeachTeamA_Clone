@@ -36,6 +36,10 @@ public class Timer : MonoBehaviour
     private MessageUIController _messageController;// メッセージUIコントローラーへの参照
 
 
+    //時間の回復量のプロパティを追加(RecoverTimesメソッド用)
+    public float recoverTime = 30f;
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     //タイマーの変数
     public float GameTimer;
@@ -218,6 +222,13 @@ public class Timer : MonoBehaviour
             if (tmpText != null) { tmpText.color = Color.white; }
         }
     }
-
+    //残り時間を増やすタイムリカバリーメソッド(プロパティの方にpublicで初期値30fにしてます)
+    public void RecoverTimes()
+    {
+        if (timeText != null)
+        {
+            totalTime += recoverTime;
+        }
+    }
 
 }
