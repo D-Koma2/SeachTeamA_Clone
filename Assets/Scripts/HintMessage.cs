@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class HintMessage : MonoBehaviour
 {
-    private MessageWindow messageWindow;
+    [SerializeField] private MessageWindow messageWindow;
     private string[] _hintTexts;
 
     private string _path = @"Assets\StreamingAssets\hints.csv";
 
-    private string _currentMsg = "未設定";
+    [SerializeField] private string _currentMsg = "未設定";
 
     private void Awake()
     {
