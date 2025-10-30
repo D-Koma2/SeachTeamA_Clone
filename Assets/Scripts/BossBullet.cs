@@ -26,8 +26,7 @@ public class BossBullet : MonoBehaviour
             status.Damage((int)damage);
             Destroy(gameObject);
         }
-        else if (other.gameObject.name != "SpawnerNormal2" || other.gameObject.name != "SpawnerNormal2 (1)" ||
-            other.gameObject.name != "SpawnerNormal2 (2)" || other.gameObject.name != "SpawnerNormal2 (3)")
+        else if (!other.gameObject.name.Contains("Spawner"))
         {
             Destroy(gameObject);
         }

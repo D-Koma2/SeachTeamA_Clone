@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9043944686974068114}
   - component: {fileID: 7471041029216409123}
+  - component: {fileID: -2656207711536173496}
   m_Layer: 0
   m_Name: SpawnerNormal
   m_TagString: Untagged
@@ -53,3 +54,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 5, y: 3, z: 5}
   m_Center: {x: 0, y: 2, z: 0}
+--- !u!114 &-2656207711536173496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1917343767851795358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb882e6b793dd574d8c8dad16006e4b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpawnerNormal
+  _enemyPrefabs:
+  - {fileID: 4692092079593511437, guid: e1a7a6cfcba3ef649bbd43e3a8d71951, type: 3}
+  _collider: {fileID: 7471041029216409123}
+  _spawnDuration: 1
+  _maxSpawnCount: 20
