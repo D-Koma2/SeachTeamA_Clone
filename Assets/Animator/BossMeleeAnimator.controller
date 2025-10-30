@@ -141,7 +141,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BossAnimator
+  m_Name: BossMeleeAnimator
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: MoveSpeed
@@ -227,7 +227,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 718e0e0e6a2ba874abe0ff13f15f2eb0, type: 2}
+  m_Motion: {fileID: 7400000, guid: e04ae0cf7c2462b4fa1263e9d4137d27, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
