@@ -11,8 +11,9 @@ public class BossAttack : MonoBehaviour
     [Header("Attack Settings")]
     public float detectRange = 15f;     // 攻撃を始める距離
     public float stopDistance = 10f;     // 追尾を止める距離
-    public float attackCooldown = 1.5f;
+    public float attackCooldown = 2f;
 
+    [SerializeField]float yofffset = 1.5f;
     private float attackTimer = 0f;
 
     private NavMeshAgent agent;
@@ -38,7 +39,6 @@ public class BossAttack : MonoBehaviour
         {
             agent.isStopped = false;
             agent.SetDestination(player.position);
-            animator.SetBool("Move", true);
         }
         // 一定範囲内 → 停止して攻撃
         else if (distance <= stopDistance)
@@ -63,7 +63,8 @@ public class BossAttack : MonoBehaviour
     // アニメーションイベントから呼ぶ
     void Shoot()
     {
-        Vector3 dir = (player.position - firePoint.position).normalized;
+        Vector3 targetpos=player.position+Vector3.up * yofffset;
+        Vector3 dir = (targetpos - firePoint.position).normalized;
         Quaternion rot = Quaternion.LookRotation(dir);
 
         Instantiate(bulletPrefab, firePoint.position, rot);
