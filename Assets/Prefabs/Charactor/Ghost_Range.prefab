@@ -444,6 +444,7 @@ MonoBehaviour:
   detectRange: 15
   stopDistance: 7
   attackCooldown: 2
+  yofffset: 0.8
 --- !u!114 &4608039044272699048
 MonoBehaviour:
   m_ObjectHideFlags: 0
