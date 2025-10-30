@@ -30,8 +30,9 @@ public class PlayerController : CommonStatus
     private MessageUIController _messageController;// メッセージUIコントローラーへの参照
 
 
-    void Start()
+    protected override void Start()
     {
+        base.Start();
         characterController = GetComponent<CharacterController>();
         transform = GetComponent<Transform>();
         var inputActionAsset = GetComponent<PlayerInput>().actions;
