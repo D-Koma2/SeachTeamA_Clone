@@ -8,7 +8,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : CommonStatus
 {
-    [SerializeField] private float waitForStopCamera = 3f;
+    [SerializeField] private float waitForStopCamera = 4f;
 
     //[SerializeField]
     //private float MoveSpeed;//移動速度
