@@ -61,6 +61,9 @@ public class PlayerController : CommonStatus
 
         if (_attack.triggered)//攻撃入力があった場合
         {
+            if (isStopping) StopCamera.Priority = 9;//カメラの優先度を元に戻す
+            isStopping = false;
+            StopTime = 0;
             GotoAttackStateIfPossible();//攻撃状態に移行
         }
         //移動方向に向ける
@@ -88,10 +91,11 @@ public class PlayerController : CommonStatus
         }
         else//移動している場合
         {
-            if(isStopping) StopCamera.Priority = 9;//カメラの優先度を元に戻す
+            if (isStopping) StopCamera.Priority = 9;//カメラの優先度を元に戻す
             isStopping = false;
             StopTime = 0;
         }
+
         LastPostion = transform.position;//最後の位置を更新
 
         if (state == StateEnum.Dead)
