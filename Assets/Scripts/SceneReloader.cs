@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -55,8 +55,8 @@ public class SceneReloader : MonoBehaviour
 
         Debug.Log("Destroyed DontDestroyOnLoad objects.");
 
-        // 1ƒtƒŒ[ƒ€‘Ò‚Á‚Ä‚©‚çƒV[ƒ“‚ğƒ[ƒh
-        yield return null;
+        // å¾…ã£ã¦ã‹ã‚‰ã‚·ãƒ¼ãƒ³ã‚’ãƒ­ãƒ¼ãƒ‰
+        yield return new WaitForSeconds(0.1f);
 
         SceneManager.LoadScene(targetScene);
         Debug.Log("Loading scene: " + targetScene);

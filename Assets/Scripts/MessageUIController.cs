@@ -400,7 +400,8 @@ public class MessageUIController : MonoBehaviour
         GameModeManager.currentMode = GameModeManager.GameMode.Explore;// モードを探索モードにリセット
 
         // 3. 現在のシーンを再ロードしてリスタート
-        SceneManager.LoadScene(_currentSceneName);
+        //SceneManager.LoadScene(_currentSceneName);
+        SceneReloader.Instance.ReloadSceneClean(_currentSceneName);
     }
 }
 
