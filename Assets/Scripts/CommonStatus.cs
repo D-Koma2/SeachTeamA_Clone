@@ -93,12 +93,4 @@ public class CommonStatus : MonoBehaviour
         return hp;
     }
 
-    private void OnDestroy()
-    {
-        if(gameObject.GetComponent<PlayerController>() != null)
-        {
-            SceneManager.LoadScene("GameOverScene");
-        }
-    }
-
 }
