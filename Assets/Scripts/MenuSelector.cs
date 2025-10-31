@@ -60,12 +60,17 @@ public class MenuSelector : MonoBehaviour
 
     void OnNavigate(InputAction.CallbackContext context)
     {
+        if (buttons.Length <= 1) return;
         if (!canReceiveInput) return;
 
         Vector2 input = context.ReadValue<Vector2>();
         if (input.y == 0) return; // 上下入力以外は無視
 
-        selectedIndex = 1 - selectedIndex;
+        if(buttons.Length == 2)
+        {
+            selectedIndex = 1 - selectedIndex;
+        }
+
         UpdateSelection();
 
         if (navigateSound != null)

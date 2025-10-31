@@ -9,7 +9,7 @@ public class ReStartButton : MonoBehaviour
     public void OnButtonclick()
     {
         restartButton.interactable = false;
-        SceneReloader.Instance.loadGameScene("GameScene");
+        SceneReloader.Instance.loadGameScene("TitleScene");
     }
 
     private void OnDisable()
