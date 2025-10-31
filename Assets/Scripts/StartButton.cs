@@ -1,19 +1,31 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Button))]
 public class StartButton : MonoBehaviour
 {
-    [SerializeField] private Button startButton;
+    [SerializeField] private Button _startButton;
+    [SerializeField] private MenuSelector _menuSelector;
+    [SerializeField] private ImageAlphaLerper _fadeLerper;
 
     public void OnButtonclick()
     {
-        startButton.interactable = false;
+        _startButton.interactable = false;
+        _menuSelector.enabled = false;
+        StartCoroutine(EnableButtonAfterDelay(1f));
+    }
+
+    IEnumerator EnableButtonAfterDelay(float delay)
+    {
+        // 完全に表示（不透明）にフェードイン
+        _fadeLerper.FadeTo(2f);
+        yield return new WaitForSeconds(delay);
         SceneReloader.Instance.loadGameScene("GameScene");
     }
 
     private void OnDisable()
     {
-        startButton.onClick.RemoveAllListeners();
+        _startButton.onClick.RemoveAllListeners();
     }
 }
