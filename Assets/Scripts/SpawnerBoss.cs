@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.AI;
 
 [RequireComponent(typeof(Collider))]
 public class SpawnerBoss : MonoBehaviour
 {
+    [SerializeField] private CinemachineCamera _camera;
     [SerializeField] private ParticleSystem _spawnEffect;
     [SerializeField] private AudioClip _spawnSound;
     [SerializeField] private GameObject[] _enemyPrefabs;
@@ -124,12 +126,23 @@ public class SpawnerBoss : MonoBehaviour
         }
     }
 
+    IEnumerator BossCamera()
+    {
+        if (_camera != null)
+        {
+            _camera.Priority = 21;
+            yield return new WaitForSeconds(0.6f);
+            _camera.Priority = 0;
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (!_isSpawning && other.gameObject.tag.Contains("Player"))
         {
             GameModeManager.SetGameMode(GameModeManager.GameMode.Annihilate);
             _target = other.transform;
+            StartCoroutine(BossCamera());
             StartCoroutine(SpawnLoop());
         }
     }
