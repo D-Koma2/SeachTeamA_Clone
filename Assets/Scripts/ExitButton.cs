@@ -6,6 +6,7 @@ using System.Collections;
 public class ExitButton : MonoBehaviour
 {
     [SerializeField] private Button _exitButton;
+    [SerializeField] private MenuSelector _menuSelector;
     [SerializeField] private ImageAlphaLerper _fadeLerper;
     [SerializeField] private AudioClip _desideSound;
 
@@ -15,13 +16,17 @@ public class ExitButton : MonoBehaviour
         {
             SoundManager.Instance.PlaySound(_desideSound);
         }
+
+        _exitButton.interactable = false;
+        _menuSelector.enabled = false;
+
         StartCoroutine(EnableButtonAfterDelay(1f));
     }
 
     IEnumerator EnableButtonAfterDelay(float delay)
     {
         // 完全に表示（不透明）にフェードイン
-        _fadeLerper.FadeTo(delay);
+        _fadeLerper.FadeTo(delay, true);
         yield return new WaitForSeconds(delay + 1f);
 
 #if UNITY_EDITOR

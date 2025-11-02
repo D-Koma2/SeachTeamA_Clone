@@ -2042,6 +2042,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ExitButton
   _exitButton: {fileID: 1669451868}
+  _menuSelector: {fileID: 1633807610}
   _fadeLerper: {fileID: 1343071207}
   _desideSound: {fileID: 8300000, guid: 62f62be1d65799446b60ba320a3501aa, type: 3}
 --- !u!1 &1819057169

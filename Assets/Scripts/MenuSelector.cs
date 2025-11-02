@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using UnityEngine.Audio;
+﻿
+using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -48,6 +48,11 @@ public class MenuSelector : MonoBehaviour
 
     void OnDisable()
     {
+        foreach (var button in buttons)
+        {
+            button.enabled = false;
+        }
+
         if (_navigate != null)
         {
             _navigate.performed -= OnNavigate;

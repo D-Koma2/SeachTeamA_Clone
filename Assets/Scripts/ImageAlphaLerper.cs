@@ -13,13 +13,13 @@ public class ImageAlphaLerper : MonoBehaviour
         FadeTo(0f);
     }
 
-    public void FadeTo(float targetAlpha)
+    public void FadeTo(float targetAlpha, bool isExit = false)
     {
         this.targetImage.enabled = true;
-        StartCoroutine(LerpAlpha(targetAlpha));
+        StartCoroutine(LerpAlpha(targetAlpha, isExit));
     }
 
-    IEnumerator LerpAlpha(float targetAlpha)
+    IEnumerator LerpAlpha(float targetAlpha, bool isExit = false)
     {
         Color startColor = targetImage.color;
         Color endColor = new Color(startColor.r, startColor.g, startColor.b, targetAlpha);
@@ -33,6 +33,6 @@ public class ImageAlphaLerper : MonoBehaviour
         }
 
         targetImage.color = endColor; // 最終値を保証
-        this.targetImage.enabled = false;
+        if (!isExit) this.targetImage.enabled = false;
     }
 }
