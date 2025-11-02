@@ -144,7 +144,7 @@ public class Timer : MonoBehaviour
 
         // 2. 時間フォーマットの適用（「D2」で常に2桁表示を保証）
         // 例: minutes.ToString("D2") が "09" や "10" を返す
-        string formattedTime = string.Format("{0:00}:{1:00}", minutes, seconds);
+        string formattedTime = string.Format("{0:0}:{1:00}", minutes, seconds);
 
         // TextMesh Proコンポーネントに設定
         if (timeText != null)

@@ -26,10 +26,10 @@ public class MessageUIController : MonoBehaviour
 
         [Header("グラデーションとテクスチャ設定(任意)")]
         // グラデーションの設定
-        public Color topLeftColor = Color.white;
-        public Color topRightColor = Color.white;
-        public Color bottomLeftColor = Color.white;
-        public Color bottomRightColor = Color.white;
+        public Color topLeftColor = Color.red;
+        public Color topRightColor = Color.red;
+        public Color bottomLeftColor = Color.yellow;
+        public Color bottomRightColor = Color.yellow;
 
         // テクスチャ（画像)設定
         public Texture mainTexture;
@@ -82,6 +82,8 @@ public class MessageUIController : MonoBehaviour
     private CinemachineBrain _cinemachineBrain; // 非アクティブにするCinemachineBrainコンポーネント
     [SerializeField]
     private GameObject _compassObject; // 非アクティブにするコンパス
+    [SerializeField] 
+    private GameObject _messageWindow; // 非アクティブにするメッセージウィンドウ
 
     void Awake()
     {
@@ -179,6 +181,11 @@ public class MessageUIController : MonoBehaviour
         {
             // TimerコンポーネントがアタッチされているGameObjectを取得し、非表示にする
             gameTimerController.gameObject.SetActive(false);
+        }
+
+        if (_messageWindow != null)
+        {
+            _messageWindow.SetActive(false);
         }
 
         _rootCanvasObject.SetActive(true);

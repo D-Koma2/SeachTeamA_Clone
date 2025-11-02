@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Splines.ExtrusionShapes;
 
 [RequireComponent(typeof(Collider))]
 public class SpawnerBoss : MonoBehaviour
@@ -13,7 +14,9 @@ public class SpawnerBoss : MonoBehaviour
     [SerializeField] private GameObject[] _enemyPrefabs;
     [SerializeField] private Collider _collider;
     [SerializeField] private int _maxSpawnCount = 21;
+    private float spawnDistance = 3f;
     private int _spawnCount = 0;
+    private float rad = 0f;
     private Transform _target;
     private bool _isSpawning;
 
@@ -69,8 +72,16 @@ public class SpawnerBoss : MonoBehaviour
             }
             else
             {
-                var distanceVector = new Vector3(5, 0);
-                var spawnPositionFromAround = Quaternion.Euler(0, Random.Range(0, 360), 0) * distanceVector;
+                if(spawnDistance % 10 == 0)
+                {
+                    spawnDistance += 2f;
+                }
+                var distanceVector = new Vector3(spawnDistance + Random.Range(-1.5f, 1.5f), 0);
+
+                var spawnPositionFromAround = Quaternion.Euler(0, rad, 0) * distanceVector;
+
+                rad += 30f;
+
                 var spawnPosition = transform.position + spawnPositionFromAround;
 
                 NavMeshHit hit;
