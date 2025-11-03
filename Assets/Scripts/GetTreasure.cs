@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GetTreasure : MonoBehaviour
 {
+    [SerializeField] private Timer _timer;
     [SerializeField] private CinemachineCamera _gameclearCamera;
     [SerializeField] private AudioClip _getSound;
 
@@ -11,6 +12,8 @@ public class GetTreasure : MonoBehaviour
     {
         if (other.gameObject.tag.Contains("Player"))
         {
+            _timer.enabled = false;
+
             //Debug.Log("お宝ゲット！！！！！！");
             if (_getSound != null)
             {

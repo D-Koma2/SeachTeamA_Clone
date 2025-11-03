@@ -1683,7 +1683,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1633807610}
         m_TargetAssemblyTypeName: MenuSelector, Assembly-CSharp
-        m_MethodName: SelectStartButton
+        m_MethodName: SelectFirstButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2019,7 +2019,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1633807610}
         m_TargetAssemblyTypeName: MenuSelector, Assembly-CSharp
-        m_MethodName: SelectExitButton
+        m_MethodName: SelectLastButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

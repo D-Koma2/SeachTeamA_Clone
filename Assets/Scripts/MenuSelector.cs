@@ -8,17 +8,14 @@ public class MenuSelector : MonoBehaviour
 {
     [SerializeField] private AudioClip navigateSound; // ナビゲーション音
     [SerializeField] private AudioClip desideSound; // 決定音
-
     [SerializeField] private GameObject selectorImage; // 選択インジケーターのイメージ
-    public Button[] buttons; // インスペクターで2つのボタンを割り当て
-    private int selectedIndex = 0;
+    [SerializeField] private Button[] buttons; // インスペクターでボタンを割り当て
+    [SerializeField] private float inputCooldownTime = 0.5f; // クールダウン時間（秒）
 
-    public float inputCooldownTime = 0.5f; // クールダウン時間（秒）
     private bool canReceiveInput = true;
-
+    private int selectedIndex = 0;
     private InputAction _navigate;
     private InputAction _submit;
-
     private bool isDesided = false;
 
     void Awake()
@@ -27,7 +24,10 @@ public class MenuSelector : MonoBehaviour
         var inputActionAsset = GetComponent<PlayerInput>().actions;
         _navigate = inputActionAsset.FindAction("Navigate");
         _submit = inputActionAsset.FindAction("Submit");
+    }
 
+    private void OnEnable()
+    {
         if (_navigate != null)
         {
             _navigate.performed += OnNavigate;
@@ -38,21 +38,13 @@ public class MenuSelector : MonoBehaviour
             _submit.performed += OnSubmit;
             _submit.Enable();
         }
-    }
 
-    private void OnEnable()
-    {
         isDesided = false;
         UpdateSelection();
     }
 
     void OnDisable()
     {
-        foreach (var button in buttons)
-        {
-            button.enabled = false;
-        }
-
         if (_navigate != null)
         {
             _navigate.performed -= OnNavigate;
@@ -62,6 +54,11 @@ public class MenuSelector : MonoBehaviour
         {
             _submit.performed -= OnSubmit;
             _submit.Disable();
+        }
+
+        foreach (var button in buttons)
+        {
+            if (button != null) button.enabled = false;
         }
     }
 
@@ -124,15 +121,15 @@ public class MenuSelector : MonoBehaviour
         buttons[selectedIndex].Select(); // UI上で選択状態にする
     }
 
-    public void SelectStartButton()
+    public void SelectFirstButton()
     {
         selectedIndex = 0;
         UpdateSelection();
     }
 
-    public void SelectExitButton() 
+    public void SelectLastButton() 
     {
-        selectedIndex = 1;
+        selectedIndex = buttons.Length - 1;
         UpdateSelection();
     }
 }

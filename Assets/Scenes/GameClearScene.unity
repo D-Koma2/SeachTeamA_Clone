@@ -1489,7 +1489,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 126585397}
         m_TargetAssemblyTypeName: MenuSelector, Assembly-CSharp
-        m_MethodName: SelectStartButton
+        m_MethodName: SelectFirstButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
