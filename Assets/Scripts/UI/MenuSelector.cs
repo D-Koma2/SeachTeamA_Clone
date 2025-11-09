@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MenuSelector : MonoBehaviour
@@ -63,6 +64,12 @@ public class MenuSelector : MonoBehaviour
 
     void OnNavigate(InputAction.CallbackContext context)
     {
+        if (Application.platform == RuntimePlatform.IPhonePlayer ||
+            Application.platform == RuntimePlatform.Android)
+        {
+            return;
+        }
+
         if (EventSystem.current.currentSelectedGameObject != null)
         {
             string selectedName = EventSystem.current.currentSelectedGameObject.name;
@@ -101,6 +108,14 @@ public class MenuSelector : MonoBehaviour
 
     void OnSubmit(InputAction.CallbackContext context)
     {
+        if (Application.platform == RuntimePlatform.IPhonePlayer ||
+            Application.platform == RuntimePlatform.Android)
+        {
+            Scene currentScene = SceneManager.GetActiveScene();
+            string sceneName = currentScene.name;
+            if (sceneName == "GameClearScene") return;
+        }
+
         if (isDesided) { Debug.Log("Submit ignored: already decided"); return; }
         if (!canReceiveInput) { Debug.Log("Submit ignored: cooldown"); return; }
 

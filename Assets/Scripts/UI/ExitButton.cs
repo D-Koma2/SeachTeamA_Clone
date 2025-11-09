@@ -10,6 +10,15 @@ public class ExitButton : MonoBehaviour
     [SerializeField] private ImageAlphaLerper _fadeLerper;
     [SerializeField] private AudioClip _desideSound;
 
+    private void Awake()
+    {
+        if (Application.platform == RuntimePlatform.IPhonePlayer ||
+            Application.platform == RuntimePlatform.Android)
+        {
+            _exitButton.gameObject.SetActive(false);
+        }
+    }
+
     public void OnButtonclick()
     {
         if (_desideSound != null)
