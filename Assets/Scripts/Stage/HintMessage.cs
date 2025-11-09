@@ -1,31 +1,32 @@
-﻿using System;
+﻿using System.Collections;
 using System.IO;
 using UnityEngine;
+using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 
 public class HintMessage : MonoBehaviour
 {
     [SerializeField] private MessageWindow messageWindow;
-    private string[] _hintTexts;
-
-    private string _path = Path.Combine(Application.streamingAssetsPath, "hints.csv");
+    private static string[] _hintTexts;
+    private string _filePath = "hints";
 
     [SerializeField] private string _currentMsg = "未設定";
 
     private void Awake()
     {
-        ReadData();
+        if (Application.platform == RuntimePlatform.IPhonePlayer ||
+            Application.platform == RuntimePlatform.Android)
+        {
+            _filePath = "hintsMobile";
+        }
+
+        if (_hintTexts == null) ReadData();
     }
 
     private void ReadData()
     {
-        try
-        {
-            _hintTexts = File.ReadAllLines(_path);
-        }
-        catch (Exception ex)
-        {
-            Debug.Log($"{_path} 読み込みエラー: {ex.Message}");
-        }
+        TextAsset csvFile = Resources.Load<TextAsset>(_filePath); // 拡張子不要
+        _hintTexts = csvFile.text.Split('\n');
     }
 
     private void OnTriggerEnter(Collider other)

@@ -2129,7 +2129,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 150, y: 150}
+  m_AnchoredPosition: {x: 150, y: 196}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &456940754
@@ -3017,7 +3017,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1637, y: 136}
+  m_AnchoredPosition: {x: 1637, y: 196}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &674600715
@@ -7546,6 +7546,10 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 192830133}
+    - target: {fileID: 2573905498892711510, guid: 6585831c82eccda40b1262f3051689c6, type: 3}
+      propertyPath: _fadeLerper
+      value: 
+      objectReference: {fileID: 574067303}
     - target: {fileID: 2573905498892711510, guid: 6585831c82eccda40b1262f3051689c6, type: 3}
       propertyPath: _gameclearCamera
       value: 
