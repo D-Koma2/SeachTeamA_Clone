@@ -48,6 +48,7 @@
 ---
 
 ## プロジェクト概要 <a id="project-overview"></a>
+<img width="1019" height="569" alt="スクリーンショット 2025-11-09 225457" src="https://github.com/user-attachments/assets/24bc9742-fa59-467e-95e6-1582a8d129fe" />
 
 | 項目 | 内容 |
 |------|------|
