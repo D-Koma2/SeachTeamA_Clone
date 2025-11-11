@@ -4,8 +4,11 @@
 指導講師：小西秀明（職業訓練校 Unity講座）
 
 ---
-- UnityPlayにアップしてありますので実際にプレイできます。
-- https://play.unity.com/en/games/05ed05c2-7c6f-4005-af4a-34c5baf396f7/search-team-a
+### YouTube プレイ動画
+https://youtu.be/O8GFdIffLyE
+
+### UnityPlay でプレイできます。
+https://play.unity.com/en/games/05ed05c2-7c6f-4005-af4a-34c5baf396f7/search-team-a
 ---
 
 ## 目次
