@@ -3,12 +3,12 @@
 **7日間開発プロジェクト — チーム用 README**  
 指導講師：小西秀明（職業訓練校 Unity講座）
 
----
-### YouTube プレイ動画
-https://youtu.be/O8GFdIffLyE
+ **YouTube プレイ動画**
+- <https://youtu.be/O8GFdIffLyE>
 
-### UnityPlay でプレイできます。
-https://play.unity.com/en/games/05ed05c2-7c6f-4005-af4a-34c5baf396f7/search-team-a
+ **UnityPlay でプレイできます。**
+- <https://play.unity.com/en/games/05ed05c2-7c6f-4005-af4a-34c5baf396f7/search-team-a>
+
 ---
 
 ## 目次
@@ -81,17 +81,21 @@ https://play.unity.com/en/games/05ed05c2-7c6f-4005-af4a-34c5baf396f7/search-team
 - [ ] その他（　　　　　　　　　　　　　　　　　　　　）
 
 ## 使用したアセット
-- Level 1 Monster Pack
- https://assetstore.unity.com/packages/3d/characters/creatures/level-1-monster-pack-77703
 
-- Haon SD series Bundle
- https://assetstore.unity.com/packages/3d/animations/haon-sd-series-bundle-84992
+**Level 1 Monster Pack**
+- https://assetstore.unity.com/packages/3d/characters/creatures/level-1-monster-pack-77703
+
+**Haon SD series Bundle**
+- https://assetstore.unity.com/packages/3d/animations/haon-sd-series-bundle-84992
 
 ## 使用した効果音・BGM のサイト
-- 魔王魂
-https://maou.audio/category/bgm/
-- 効果音ラボ
-https://soundeffect-lab.info/
+
+**魔王魂**
+- https://maou.audio/category/bgm/
+
+**効果音ラボ**
+- https://soundeffect-lab.info/
+
 ---
 
 ## 進行スケジュール（目安） <a id="schedule"></a>
@@ -211,7 +215,5 @@ Assets/
 > **目的**  
 > このREADMEは「開発ドキュメント」としてチーム全員が更新することを目的としています。  
 > 完成よりも「考え方・工夫・チーム連携の過程」を重視してください。
-
----
 
 © 2025 職業訓練校 Unity講座（講師：小西秀明）
