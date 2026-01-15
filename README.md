@@ -48,7 +48,7 @@
 ---
 
 ## プロジェクト概要 <a id="project-overview"></a>
-<img width="1019" height="569" alt="スクリーンショット 2025-11-09 225457" src="https://github.com/user-attachments/assets/24bc9742-fa59-467e-95e6-1582a8d129fe" />
+<img width="1019" height="569" alt="スクリーンショット 2025-11-09 225457" src="https://github.com/user-attachments/assets/cdea0436-90e7-4bac-bd39-585de1cb8cc9" />
 
 | 項目 | 内容 |
 |------|------|
@@ -198,21 +198,22 @@ Assets/
 - 当初はパーツに床も含めていましたが、今回床は1種類なので起動時の生成処理軽減のため、ひとつだけにしてサイズ変更で済ます事にしました。
 - 壁のパーツ番号は 00 ～ 21 まで、99 は何も配置しない番号。
 
-<img width="800" height="483" alt="mapCsv1" src="https://github.com/user-attachments/assets/0f868416-90ca-4fed-9e25-f1120f370436" />
+<img width="800" height="483" alt="mapCsv1" src="https://github.com/user-attachments/assets/958731e4-d13a-4a1a-9a70-3534b117cea0" />
 
 - ヒントを表示するオブジェクト・ギミックのある壁・敵のスポーナーもプレハブを作成し、CSVファイルにより配置。
 - CSVファイルは一つにまとめたかったのですが、CSV編集時の見やすさ(各セル2文字)を考慮し、2つに分けました。
 - マップ上一つしか配置しないもの(宝箱、ボス用スポーナー)と回復・時計のアイテムなどは制作時間と位置の細かい変更やバランス調整の手間から考慮して、手動での配置としました。
 - 00:何もなし / SS:スタート地点 / A1:部屋用スポーナー / B1～B5:一方通行用壁 / N0:通常スポーナー / W1～W6:近づくと表示する壁
 
-<img width="800" height="483" alt="mapCsv2" src="https://github.com/user-attachments/assets/fddc2cc2-2e50-4b25-83ac-17e1a2104c59" />
+<img width="800" height="483" alt="mapCsv2" src="https://github.com/user-attachments/assets/62b03a40-f59a-4c87-bac3-0c7f0374e0c1" />
 
 ## 敵スポーナー仕様
 - 部屋用スポーナーは殲滅モードにて敵を全滅させる必要がある事から、通路をギミック壁で塞ぎプレイヤーを部屋から出られなくする必要があるので、ギミック壁とセットでプレハブ化。
 - 生成時敵に死亡時発行イベントを登録してリストに追加し、敵の死亡時スポーナーにイベントを送る。リストの敵が全滅したら殲滅モードを終了し自身を消去。
 - 通常スポーナーはプレイヤーがコライダーの範囲内に入ると敵の生成を行うのは同じですが、リスト管理はしません。
 
-<img width="800" height="409" alt="spawner" src="https://github.com/user-attachments/assets/d71b06c1-4ae6-4075-b2fd-59e34984467d" />
+<img width="800" height="409" alt="spawner" src="https://github.com/user-attachments/assets/ef65585f-7dce-4aba-8ceb-d9d3d8074b86" />
+
 
 ---
 
