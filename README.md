@@ -3,6 +3,8 @@
 **7日間開発プロジェクト — チーム用 README**  
 指導講師：小西秀明（職業訓練校 Unity講座）
 
+<img width="1019" height="569" alt="スクリーンショット 2025-11-09 225457" src="https://github.com/user-attachments/assets/cdea0436-90e7-4bac-bd39-585de1cb8cc9" />
+
  **YouTube プレイ動画**
 - <https://youtu.be/O8GFdIffLyE>
 
@@ -48,7 +50,6 @@
 ---
 
 ## プロジェクト概要 <a id="project-overview"></a>
-<img width="1019" height="569" alt="スクリーンショット 2025-11-09 225457" src="https://github.com/user-attachments/assets/cdea0436-90e7-4bac-bd39-585de1cb8cc9" />
 
 | 項目 | 内容 |
 |------|------|
